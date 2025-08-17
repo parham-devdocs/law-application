@@ -8,7 +8,7 @@ import NavbarComponent from './components/navbar';
          <>
          <div className=''>
          </div>
-         <main className=' flex flex-col w-screen h-screen bg-blue-100 '>
+         <main className=' flex flex-col w-screen h-screen '>
             <NavbarComponent/>
             <div className=' mt-16'>{children}</div>
             </main>

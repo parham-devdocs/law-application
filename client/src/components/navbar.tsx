@@ -6,12 +6,12 @@ import { FaHome } from "react-icons/fa";
 import { MdLogin } from "react-icons/md";
 const loggedIn=true
 const NavbarComponent = () => (
-  <Navbar className=' fixed w-full border-b-2 border-blue-500 px-4 ' style={{backgroundColor:"ButtonFace"}} >
+  <Navbar className=' border-b-2 border-blue-500 px-4 ' style={{backgroundColor:"ButtonFace"}} >
     <Navbar.Brand href="#" className=''><FaHome size={20}/></Navbar.Brand>
-    <Nav >
+    <Nav className=' hidden md:flex' >
       <Nav.Item className=' hover:text-blue-500'  href='/docs'>مشاهده پرونده ها</Nav.Item>
     </Nav>
-    <Nav >
+    <Nav className=' hidden md:flex' >
       <Nav.Item className=' hover:text-blue-500'  href='/profile'>مشاهده پروفایل</Nav.Item>
     </Nav>
     <Nav pullRight className=' flex items-center' >
