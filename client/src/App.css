@@ -1,9 +1,16 @@
+@import "tailwindcss";
+@layer utilities; 
+@layer utilities {
+  
+  .bg-background {
+    background-color: #4287f5
+  }
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
- 
 }
 
 .logo {
