@@ -1,4 +1,5 @@
 import { FaCheckCircle, FaRegClock, FaTimesCircle } from 'react-icons/fa';
+import { MdDocumentScanner } from 'react-icons/md';
 import { Card, Text, Avatar, HStack, VStack, Badge, Button } from 'rsuite';
 
 type CardProps = {
@@ -76,7 +77,13 @@ const CardComponent = ({
               {type}
             </Text>
           </VStack>
-        </HStack>
+          <div className=' flex flex-1 justify-end'>
+          <div className="flex items-center justify-center px-2 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium gap-1">
+  <MdDocumentScanner className="text-blue-500" />
+  <span>{numberOfPapers}</span>
+</div>  
+          </div>
+      </HStack>
       </Card.Header>
 
       <Card.Body>
