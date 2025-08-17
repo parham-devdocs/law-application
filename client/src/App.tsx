@@ -4,12 +4,15 @@ import Home from './pages/Home';
 import Docs from "./pages/docs";
 import Profile from "./pages/profile";
 import Login from "./pages/login";
+import NotFound from "./pages/notFound";
 function App() {
   return <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/docs" element={<Docs/>}/>
   <Route path='/profile' element={<Profile/>}/>
   <Route path='/login' element={<Login/>}/>
+  <Route path='*' element={<NotFound/>}/>
+
 </Routes>
 }
 
