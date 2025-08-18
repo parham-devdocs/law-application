@@ -1,5 +1,5 @@
 import { FaExclamationCircle } from "react-icons/fa"
-import { Button, Stack, Text, VStack } from "rsuite"
+import { Button,  Text, VStack } from "rsuite"
 
 const notFound = () => {
   return (

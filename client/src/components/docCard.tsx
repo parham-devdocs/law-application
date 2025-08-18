@@ -117,7 +117,7 @@ const CardComponent = ({
           {endDate && <span>پایان: {endDate}</span>}
         </HStack>
       </Card.Footer>
-      <Button appearance="primary" style={{margin:5}}>جزییات</Button>
+      <Button appearance="primary" style={{margin:5}} href={`/docs/${docId}`}>جزییات</Button>
 
     </Card>
   );
