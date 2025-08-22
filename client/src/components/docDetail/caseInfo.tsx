@@ -1,7 +1,8 @@
-import {  HStack, Stack, Text, useMediaQuery, VStack } from "rsuite";
+import { HStack, Stack, Text, useMediaQuery, VStack } from "rsuite";
 import Person from "../../assets/unknownPerson.jpeg";
 import { useParams } from 'react-router-dom';
-
+import { GoLaw } from "react-icons/go";
+import { FaPhoneFlip } from "react-icons/fa6";
 import {
   FaUser,
   FaIdCard,
@@ -19,6 +20,8 @@ type ClientPersonalInfoProps = {
   picture?:string
   caseType: "حقوقی" | "کیفری";
   proceedingNumber: string;
+  phoneNumber:string,
+  courtName:string
 };
 const caseInfo:ClientPersonalInfoProps={
 caseType:"حقوقی",
@@ -27,8 +30,8 @@ nationalId:"0021808821",
 plaintiff:"علی علیزاده",
 proceedingNumber:"125646584849848585",
 defendant:"احمد احمدی",
-
-}
+phoneNumber:"+989124687022",
+courtName:""}
 const CaseInfo = () => {
   const [isMobile] = useMediaQuery("(max-width: 700px)");
   const {id:caseId}=useParams<{id:string}>()
@@ -65,6 +68,10 @@ const CaseInfo = () => {
           <FaUser className="text-red-500" />
           <span className="font-semibold">خوانده/متشاکی عنه:</span> {caseInfo.defendant}
         </Text>
+        <Text className="flex items-center gap-2 text-sm">
+          <GoLaw className="text-purple-600" />
+          <span className="font-semibold">مرجع قضایی</span> {caseInfo.courtName}
+        </Text>
 
        
       </VStack>
@@ -87,10 +94,13 @@ const CaseInfo = () => {
           <FaFileAlt className="text-orange-500" />
           <span className="font-semibold">شماره پرونده:</span> {caseInfo.proceedingNumber}
         </Text>
+        <Text className="flex items-center gap-2 text-sm">
+          <FaPhoneFlip className="text-orange-500" />
+          <span className="font-semibold">شماره تماس</span> {caseInfo.phoneNumber}
+        </Text>
       </VStack>
-      
       </Stack>
-      <HStack alignItems="center" justifyContent="center"   >
+      <HStack alignItems="center" justifyContent="center" className=" flex"   >
        <ImageUploader title="آپلود مدرک"/>
       </HStack>
 
