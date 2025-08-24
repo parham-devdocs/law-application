@@ -10,15 +10,17 @@ export default function DatePickerComponent({onChangeHandler}:{onChangeHandler:a
 
   const changeDateHandler=({year,month,day}:{day:number,month:number,year:number})=>{
 const convertedDate=toGregorianDate({year,month,day})
-onChangeHandler({
-  year: convertedDate.gy,
-  month: convertedDate.gm,
-  day: convertedDate.gd,
-})
-console.log(convertedDate)
+onChangeHandler(convertedDate)
+
 
 }
-  return <DatePicker   calendar={persian}  locale={persian_fa} value={value}  onChange={(e) => {
+  return <DatePicker style={{
+  
+    height: "36px",
+    borderRadius: "8px",
+    cursor:"pointer"
+    
+  }}  calendar={persian}  locale={persian_fa} value={value}  onChange={(e) => {
     changeDateHandler({
       day: e.day,
       month: e.month.index,

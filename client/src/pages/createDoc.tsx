@@ -400,7 +400,7 @@ function ClientInfo({
 
       <div className=' w-full'>
         <label className="block text-sm font-medium text-gray-700 mb-1">تاریخ تولد</label>
-      <DatePicker onChangeHandler={(e)=>console.log(e)}/>
+      <DatePicker onChangeHandler={(e)=>{onChange("dateOfBirth",e)}}/>
         {error.dateOfBirth && <p className="text-sm text-red-500">{error.dateOfBirth}</p>}
       </div>
 
