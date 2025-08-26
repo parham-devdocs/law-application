@@ -18,6 +18,7 @@ type FormData = {
   proceedingNumber: string;
   phoneNumber: string;
   courtName: string;
+  description:string
 };
 
 type Errors = {
@@ -46,6 +47,7 @@ const CreateDoc: React.FC = () => {
     phoneNumber: '',
     courtName: '',
     clients: [{ id: 1, fullName: '', nationalId: '', dateOfBirth: '' }],
+    description:""
   });
 
   const [errors, setErrors] = useState<Errors>({ clients: [] });
@@ -313,6 +315,7 @@ const CreateDoc: React.FC = () => {
                 onChange={(value) => handleChange(value, { target: { name: 'phoneNumber' } } as any)}
                 className={`flex-1 ${errors.phoneNumber ? 'border-red-500' : 'border-gray-300'}`}
                 placeholder="09123456789"
+                type='number'
               />
             </div>
             {errors.phoneNumber && <p className="text-sm text-red-500">{errors.phoneNumber}</p>}
@@ -344,6 +347,16 @@ const CreateDoc: React.FC = () => {
               <option value="حقوقی">حقوقی</option>
               <option value="کیفری">کیفری</option>
             </select>
+          </div>
+          <div className="space-y-2">
+            <label className="block text-sm font-medium text-gray-700 mb-1">خلاصه پرونده</label>
+            
+             
+               <Input as="textarea" value={formData.description}     
+                onChange={(value) => handleChange(value, { target: { name: "description" } } as any)}
+               rows={4}  className=' border-gray-300 flex-1'   />
+
+            
           </div>
 
           <div className="pt-4">

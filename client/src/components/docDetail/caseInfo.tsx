@@ -15,8 +15,8 @@ import ImageUploader from "../imageUploader";
 type ClientPersonalInfoProps = {
   clientFullName: string;
   nationalId: string;
-  plaintiff: string;
-  defendant: string;
+  plaintiff: string[];
+  defendant: string[];
   picture?:string
   caseType: "حقوقی" | "کیفری";
   proceedingNumber: string;
@@ -27,9 +27,9 @@ const caseInfo:ClientPersonalInfoProps={
 caseType:"حقوقی",
 clientFullName:"علی علیزاده",
 nationalId:"0021808821",
-plaintiff:"علی علیزاده",
+plaintiff:["lkamwd","ljkqwnhdljwhqd"],
 proceedingNumber:"125646584849848585",
-defendant:"احمد احمدی",
+defendant:["lkamwd","ljkqwnhdljwhqd"],
 phoneNumber:"+989124687022",
 courtName:""}
 const CaseInfo = () => {

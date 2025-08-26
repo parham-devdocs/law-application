@@ -3,7 +3,7 @@ import React from 'react';
 const Profile = () => {
   return (
     <div 
-      className="bg-white rounded-xl shadow-lg overflow-hidden max-w-md mx-auto transition-transform duration-300 hover:shadow-xl"
+      className="bg-white rounded-xl shadow-lg overflow-hidden max-w-md mx-auto transition-transform duration-300 hover:shadow-xl mt-20"
       dir="rtl"
     >
       {/* Cover & Profile Picture */}
