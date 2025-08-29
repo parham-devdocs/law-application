@@ -7,10 +7,12 @@ import Login from "./pages/login";
 import DocDetail from "./pages/docDetail";
 import NotFound from "./pages/notFound";
 import CreateDoc from './pages/createDoc';
+import TimeTable from './pages/timeTable';
 function App() {
   return <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/docs" element={<Docs/>}/>
+  <Route path="/timeTable" element={<TimeTable/>}/>
   <Route path="/docs/create" element={<CreateDoc/>}/>
   <Route path="/docs/:id" element={<DocDetail/>}/>
   <Route path='/profile' element={<Profile/>}/>
